@@ -1,0 +1,17 @@
+{
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "enterprise_count": 50,
+    "policy_count": 10,
+    "segment_count": 5,
+    "with_source_ratio": 1.0,
+    "missing_dims": {
+      "经营规模": 9,
+      "技术/资质": 5,
+      "投资动向": 16
+    },
+    "pending_segments": [],
+    "last_import_at": "2026-11-24 08:52:25"
+  }
+}

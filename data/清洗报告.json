@@ -1,0 +1,26 @@
+{
+  "输入企业数": 50,
+  "输入政策数": 10,
+  "去重": {
+    "信用代码重复": [],
+    "名称地域重复": []
+  },
+  "缺失字段统计": {
+    "credit_code": 9,
+    "employee_scale": 9,
+    "investment_events": 16,
+    "revenue_scale": 25,
+    "production_bases": 35,
+    "tech_qualifications": 5,
+    "reg_capital": 4,
+    "legal_person": 2
+  },
+  "待确认环节": [],
+  "行业代码异常": [],
+  "地域异常": [],
+  "规模模糊表述": [],
+  "来源拒收": [],
+  "政策拒收": [],
+  "输出企业数": 50,
+  "输出政策数": 10
+}
