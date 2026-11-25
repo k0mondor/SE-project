@@ -1,0 +1,18 @@
+:root {
+  --color-page:#000; --color-surface:#131518; --color-surface-hover:#222529;
+  --color-icon:#343940; --color-blue:#5986fa; --color-blue-hover:#298dff;
+  --color-text:#fff; --color-muted:#a3aab5; --color-footer:#7e8796;
+  --color-paper:#fff; --color-panel:#f4f5f7; --color-ink:#080a0d;
+  --color-rule:#c2c6cd; --color-rule-dark:#4b515b;
+  --font-sans:'Inter','Noto Sans SC',sans-serif;
+  --font-mono:ui-monospace,'Cascadia Mono',Consolas,monospace;
+  --text-xs:12.444px; --text-sm:14.222px; --text-base:16px;
+  --text-card:18.674px; --text-feature:clamp(26px,3.0556vw,48px);
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+  --space-6:24px; --space-8:32px; --space-12:48px; --space-16:64px;
+  --page-gutter:clamp(16px,1.3889vw,28px); --nav-height:56px;
+  --button-height:42.667px; --icon-size:clamp(48px,4.4444vw,64px);
+  --radius:0; --ease-out:cubic-bezier(.16,1,.3,1);
+  --motion-hover:.4s; --motion-stagger:10ms;
+}
+:root[data-motion='reduced']{--motion-hover:0s;--motion-stagger:0ms}

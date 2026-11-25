@@ -1,0 +1,9 @@
+<script setup lang="ts">
+import UiIcon from './UiIcon.vue'
+import RevealLink from './RevealLink.vue'
+defineProps<{title:string;english:string;description:string;details:readonly string[];to:string;icon:string}>()
+</script>
+<template><RouterLink :to="to" class="role-card motion-trigger"><header class="role-card__head"><UiIcon :name="icon"/><div><h3>{{english}}</h3><span>{{title}}</span></div></header><div class="dotted-rule"></div><div class="role-card__body"><p>{{description}}</p><ul><li v-for="detail in details" :key="detail"><svg viewBox="0 0 24 8" aria-hidden="true"><path d="M1 0V7H24" fill="none" stroke="currentColor" stroke-width="2"/></svg>{{detail}}</li></ul><div class="dotted-rule"></div><RevealLink embedded/></div></RouterLink></template>
+<style scoped>
+.role-card{display:flex;flex-direction:column;background:var(--color-surface);padding:20px;min-height:465px;transition:background .4s var(--ease-out);--color-rule-dark:#4b515b}.role-card:hover,.role-card:focus-visible{background:var(--color-surface-hover)}.role-card__head{display:flex;align-items:center;gap:10px;padding:0 0 20px}.role-card__head>svg{height:26px;width:26px}.role-card h3{font-size:var(--text-card);line-height:1.1;letter-spacing:-.02em}.role-card__head span{display:block;font-size:var(--text-xs);color:var(--color-muted);margin-top:5px}.role-card__body{margin-top:clamp(64px,7vw,100px);display:flex;flex-direction:column;gap:24px;flex:1;font-size:var(--text-base);line-height:1.4}.role-card__body>p{min-height:45px}.role-card ul{list-style:none;padding:0;margin:0;display:grid;gap:14px;flex:1}.role-card li{display:flex;gap:14px;align-items:center;font-size:var(--text-sm)}.role-card li svg{width:24px;height:8px;color:var(--color-blue);flex:none}.role-card__body>.dotted-rule{margin-top:4px}.role-card__body :deep(.reveal-link){margin-top:-12px}@media(max-width:700px){.role-card{min-height:430px}.role-card__body{margin-top:64px}.role-card__body>p{min-height:0}}
+</style>
