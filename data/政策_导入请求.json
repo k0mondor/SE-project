@@ -1,0 +1,114 @@
+{
+  "records": [
+    {
+      "title": "杭州市人民政府办公厅关于促进集成电路产业高质量发展的实施意见",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2022-07-15",
+      "eligibility": "重点支持领域的高端芯片产品",
+      "content": "对重点支持领域的高端芯片产品，首次流片费用 1000 万元以上的，按照不超过其流片费用的 15% 给予补助，最高补助 2000 万元。",
+      "source_url": "https://www.hangzhou.gov.cn/art/2022/7/15/art_1229063382_1822591.html"
+    },
+    {
+      "title": "杭州市集成电路产业关键材料与核心设备研发投入补助",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2022-07-15",
+      "eligibility": "关键材料、核心设备自主研发投入 5000 万元以上并实现销售",
+      "content": "对集成电路关键材料、核心设备等自主研发投入 5000 万元以上并实现实际销售的，按照不超过其研发投入的 15% 给予补助，最高补助 5000 万元。",
+      "source_url": "https://www.hangzhou.gov.cn/art/2022/7/15/art_1229063382_1822591.html"
+    },
+    {
+      "title": "杭州市集成电路 EDA 工具技术攻关补助",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2022-07-15",
+      "eligibility": "EDA 工具自主研发投入 1000 万元以上并实现销售",
+      "content": "对开展 EDA 工具技术攻关，自主研发投入 1000 万元以上并实现实际销售的，按照不超过其自主研发投入的 15% 给予补助，最高补助 2000 万元。",
+      "source_url": "https://www.hangzhou.gov.cn/art/2022/7/15/art_1229063382_1822591.html"
+    },
+    {
+      "title": "杭州市集成电路重大项目用地与人才要素保障",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "用地保障",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2022-07-15",
+      "eligibility": "通过国家行业指导的市重大产业项目",
+      "content": "推荐重点项目纳入省重大项目库，对通过国家行业指导的市重大产业项目，统筹市区两级现有政策，做好项目用地、人才等要素保障。",
+      "source_url": "https://www.hangzhou.gov.cn/art/2022/7/15/art_1229063382_1822591.html"
+    },
+    {
+      "title": "关于进一步鼓励集成电路产业加快发展专项政策",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2018-07-11",
+      "eligibility": "集成电路产业研发投入 300 万元以上项目",
+      "content": "对集成电路产业研发投入超过 300 万元（含）以上项目，给予其实际研发投入的 20%、最高不超过 1000 万元的补助。",
+      "source_url": "https://zfgb.hangzhou.gov.cn/upload/default/bigfile/2025/06/04/20250604_c923fd6357be5772469d63b1714620e4.pdf"
+    },
+    {
+      "title": "杭州市集成电路企业购买 IP 补助",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2018-07-11",
+      "eligibility": "购买 IP 开展高端芯片、先进或特色工艺研发的企业",
+      "content": "对购买 IP 开展高端芯片、先进或特色工艺研发的集成电路企业，给予其购买 IP 直接费用的 30%、最高不超过 200 万元的补助。",
+      "source_url": "https://zfgb.hangzhou.gov.cn/upload/default/bigfile/2025/06/04/20250604_c923fd6357be5772469d63b1714620e4.pdf"
+    },
+    {
+      "title": "杭州市集成电路企业流片费用补助",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州市人民政府办公厅",
+      "publish_date": "2018-07-11",
+      "eligibility": "进行重点支持领域工程产品流片的企业",
+      "content": "对进行重点支持领域工程产品流片的集成电路企业，给予其该款产品掩膜版制作费用的 50% 或首轮流片费用的 30%、最高不超过 300 万元的补助。",
+      "source_url": "https://zfgb.hangzhou.gov.cn/upload/default/bigfile/2025/06/04/20250604_c923fd6357be5772469d63b1714620e4.pdf"
+    },
+    {
+      "title": "杭州高新区（滨江）集成电路企业房租补贴",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "租金补贴",
+      "issuer": "杭州高新区管委会",
+      "publish_date": "2025-01-01",
+      "eligibility": "新设立或新引进的集成电路企业，经芯火平台审核通过",
+      "content": "对新设立或新引进的集成电路企业，经芯火平台审核通过后，按照房租补贴人均面积和单价标准，给予最长三年、最高全额的房租补贴。",
+      "source_url": "http://www.hicc.org.cn/news-detail-580691.html"
+    },
+    {
+      "title": "杭州高新区（滨江）集成电路企业购买 EDA 工具补助",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "研发补贴",
+      "issuer": "杭州高新区管委会",
+      "publish_date": "2025-01-01",
+      "eligibility": "集成电路企业购买 EDA 工具",
+      "content": "对集成电路企业购买 EDA 工具的，按照不超过实际发生费用的 20% 给予补贴，每家企业年度最高补贴 100 万元。",
+      "source_url": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web2945/site/attach/0/cd1d68feb5a7405098f73adbe3e001c5.pdf"
+    },
+    {
+      "title": "杭州高新区（滨江）芯片模组终端应用补贴",
+      "region": "浙江省杭州市",
+      "industry": "集成电路",
+      "policy_type": "落户奖励",
+      "issuer": "杭州高新区管委会",
+      "publish_date": "2025-01-01",
+      "eligibility": "终端厂商试用非关联集成电路企业首次上市的芯片或模组，年度采购 300 万元以上",
+      "content": "芯片、模组类当年度采购金额累计达 300 万元以上，按照最高不超过当年采购金额的 30% 给予补贴，每家企业最高补贴 150 万元。",
+      "source_url": "http://www.hicc.org.cn/news-detail-580691.html"
+    }
+  ]
+}
