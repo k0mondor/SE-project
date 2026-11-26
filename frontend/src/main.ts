@@ -1,0 +1,10 @@
+import { createApp } from 'vue'
+import '@fontsource/inter/latin-400.css'
+import '@fontsource/inter/latin-500.css'
+import '@fontsource/noto-sans-sc/400.css'
+import 'lenis/dist/lenis.css'
+import './styles/tokens.css'
+import './styles/base.css'
+import App from './App.vue'
+import { router } from './router'
+createApp(App).use(router).mount('#app')

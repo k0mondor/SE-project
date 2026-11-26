@@ -26,3 +26,9 @@ Thumbs.db
 
 # 本地数据库，由 data/schema.sql + data/import_data.py 重建
 data/data.db
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.impeccable/review/
