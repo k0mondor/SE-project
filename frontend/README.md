@@ -32,7 +32,7 @@ npm test
 | `/specialist` | `src/pages/specialist/index.vue`，招商专员看板 |
 | `/planning` | `src/pages/planning/index.vue`，规划专班看板 |
 
-后三个已分别提供独立目录与页面入口，目前引用 `WorkspacePage.vue` 占位骨架，只有数据服务状态查询是真实功能。各自直接替换目录内 `index.vue`，局部组件放在该目录的 `components/`，无需改路由。不复制 App、导航、页脚或数据服务。路由可直接打开和刷新；生产服务器需要 history fallback 到 index.html。
+后三个已分别提供独立目录与页面入口。决策领导页通过 D1 接口读取短板诊断和企业样本。各角色页在自己的 `index.vue` 中开发，局部组件放在同级 `components/`。公共导航与页脚由框架提供。路由可直接打开和刷新，生产服务器需要 history fallback 到 index.html。
 
 ## 目录
 

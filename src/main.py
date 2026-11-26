@@ -5,6 +5,7 @@ from fastapi import FastAPI, Query
 
 from src.bootstrap import ensure_database
 from src.import_service import import_enterprises, import_policies, import_status
+from src.leadership_service import diagnose_shortages
 from src.query_service import enterprise_profile, list_enterprises, match_policies, segment_coverage
 from src.schemas import EnterpriseImportRequest, PolicyImportRequest
 
@@ -69,6 +70,7 @@ def enterprises(
     keyword: str = Query(None, description="企业名称或行业关键词"),
     page: int = Query(1, ge=1, description="页码"),
     page_size: int = Query(20, ge=1, le=100, description="每页条数"),
+    include_subregions: bool = Query(False, description="按完整地域名称前缀包含下辖区域"),
 ):
     return _ok(list_enterprises(
         industry_codes=industry_code,
@@ -78,6 +80,7 @@ def enterprises(
         keyword=keyword,
         page=page,
         page_size=page_size,
+        include_subregions=include_subregions,
     ))
 
 
@@ -92,6 +95,14 @@ def profile(enterprise_id: int):
 @app.get("/api/v1/data/segments/coverage")
 def coverage(region: str = Query(None, description="可选，按地域统计")):
     return _ok(segment_coverage(region))
+
+
+@app.get("/api/v1/leadership/shortages")
+def leadership_shortages(
+    region: str = Query(None, description="按完整地域名称筛选"),
+    include_subregions: bool = Query(False, description="包含下辖区域"),
+):
+    return _ok(diagnose_shortages(region, include_subregions))
 
 
 @app.get("/api/v1/policies/match")
