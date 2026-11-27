@@ -10,8 +10,15 @@ B1_FIELDS = [
 ]
 
 
+def enterprise_region_filter(region, include_subregions=False):
+    if include_subregions:
+        return "substr(region, 1, length(?)) = ?", [region, region]
+    return "region = ?", [region]
+
+
 def list_enterprises(industry_codes=None, segments=None, employee_scale=None,
-                     region=None, keyword=None, page=1, page_size=20):
+                     region=None, keyword=None, page=1, page_size=20,
+                     include_subregions=False):
     """D2 组合筛选。条件之间 AND，同类多值 OR，返回命中原因，不打分。"""
     industry_codes = [x for x in (industry_codes or "").split(",") if x.strip()]
     segments = [x for x in (segments or "").split(",") if x.strip()]
@@ -28,8 +35,9 @@ def list_enterprises(industry_codes=None, segments=None, employee_scale=None,
         where.append("employee_scale = ?")
         params.append(employee_scale)
     if region:
-        where.append("region = ?")
-        params.append(region)
+        predicate, region_params = enterprise_region_filter(region, include_subregions)
+        where.append(predicate)
+        params.extend(region_params)
     if keyword:
         where.append("(name LIKE ? OR industry_name LIKE ?)")
         params.extend([f"%{keyword}%", f"%{keyword}%"])
@@ -150,28 +158,24 @@ def enterprise_profile(enterprise_id):
     }
 
 
-def segment_coverage(region=None):
+def segment_coverage(region=None, include_subregions=False, *, connection=None):
     """C1 环节覆盖统计。只给数量与占比，不判定短板。"""
-    conn = connect()
+    conn = connection if connection is not None else connect()
     try:
+        where, params = "", []
         if region:
-            rows = conn.execute(
-                "SELECT chain_segment AS segment, COUNT(*) AS count FROM enterprise "
-                "WHERE region = ? GROUP BY chain_segment ORDER BY chain_segment",
-                (region,),
-            ).fetchall()
-            total = conn.execute(
-                "SELECT COUNT(*) FROM enterprise WHERE region = ?", (region,)
-            ).fetchone()[0]
-        else:
-            rows = conn.execute(
-                "SELECT chain_segment AS segment, COUNT(*) AS count FROM enterprise "
-                "GROUP BY chain_segment"
-            ).fetchall()
-            total = conn.execute("SELECT COUNT(*) FROM enterprise").fetchone()[0]
+            predicate, params = enterprise_region_filter(region, include_subregions)
+            where = " WHERE " + predicate
+        rows = conn.execute(
+            "SELECT chain_segment AS segment, COUNT(*) AS count FROM enterprise"
+            + where + " GROUP BY chain_segment ORDER BY chain_segment",
+            params,
+        ).fetchall()
     finally:
-        conn.close()
+        if connection is None:
+            conn.close()
 
+    total = sum(r["count"] for r in rows)
     segments = []
     for r in rows:
         segments.append({
